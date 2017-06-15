@@ -3,6 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cool Site</title>
+	<script src="/js/jquery.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			$("#newsletter-form").slideDown();
+		});
+
+		function closeForm()
+		{
+			$('#newsletter-form').slideUp();
+		}
+	</script>
 </head>
 <body>
 	
