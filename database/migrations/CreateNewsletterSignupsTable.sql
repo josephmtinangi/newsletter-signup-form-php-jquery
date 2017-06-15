@@ -1,0 +1,7 @@
+CREATE TABLE newsletter_signups (
+	id INT(11) PRIMARY KEY auto_increment,
+	name VARCHAR(255) NULL,
+	email TEXT UNIQUE,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);

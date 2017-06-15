@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Cool Site</title>
-	<script src="/js/jquery.min.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			$("#newsletter-form").slideDown();
-		});
+    <meta charset="UTF-8">
+    <title>Cool Site</title>
+    <link rel="stylesheet" href="/css/newsletter.css">
+    <script src="/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#newsletter-form").hide();
 
-		function closeForm()
-		{
-			$('#newsletter-form').slideUp();
-		}
-	</script>
+            var isShown = false;
+            
+            if (isShown === false) {
+                setTimeout(displayForm, 3000);
+            }
+
+            function displayForm(){
+                $("#newsletter-form").slideDown();
+            }
+
+            $("#closeForm").click(closeForm);
+
+            function closeForm() {
+                isShown = true;
+                $('#newsletter-form').slideUp();
+            }
+        });
+    </script>
 </head>
 <body>
-	
-	<div id="newsletter-form">
-		<h1 class="signup-label">Subscribe To Get Email Updates Of Our Latest Tutorials On Web Development</h1>
-		<form action="signup.php" method="POST">
-			<p>
-				<input type="text" name="email" id="email" placeholder="Enter your email address">
-			</p>
-			<input type="submit" value="Subscribe" name="submitForm">
-			<input type="button" value="No Thanks" onclick="closeForm();">
-		</form>
-	</div>
 
-	<div id="wrapper">
-		<h2>Create Newsletter SignUp Form Using jQuery and PHP</h2>
-	</div>
+<div id="newsletter-form">
+    <h1 class="signup-label">Subscribe To Get Email Updates Of Our Latest Tutorials On Web Development</h1>
+    <form action="signup.php" method="POST">
+        <p>
+            <input type="text" name="name" id="email" placeholder="Enter your name">
+            <input type="email" name="email" id="email" placeholder="Enter your email address">
+        </p>
+        <input type="submit" value="Subscribe" name="submitForm">
+        <input type="button" id="closeForm" value="No Thanks">
+    </form>
+</div>
+
+<div id="wrapper">
+    <h2>Create Newsletter SignUp Form Using jQuery and PHP</h2>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    font-family: helvetica;
+    background-color: #312635;
+}
+
+#newsletter-form {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #CC8A8F;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+#newsletter-form h1 {
+    font-size: 45px;
+    color: #4A3F4C;
+}
+
+#newsletter-form #name {
+    margin-top: 20px;
+    width: 20%;
+    height: 50px;
+    padding-left: 20px;
+    border: none;
+    font-size: 17px;
+}
+
+#newsletter-form #email {
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    padding-left: 20px;
+    border: none;
+    font-size: 17px;
+}
+
+#newsletter-form input[type="submit"] {
+    margin-top: 10px;
+    width: 35%;
+    height: 50px;
+    border: none;
+    background-color: #084B8A;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#newsletter-form input[type="button"] {
+    margin-top: 10px;
+    width: 35%;
+    height: 50px;
+    border: none;
+    background-color: #FE2E2E;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#wrapper {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    width: 995px;
+    color: #8F7276;
+    font-size: 45px;
+}
